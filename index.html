@@ -44,8 +44,8 @@
                     <div class="nav-wrapper">
                         <a href="#!" class="brand-logo title">CounteractIO</a>
                         <ul class="right hide-on-med-and-down">
-                            <li><a href="sass.html">Sass</a></li>
-                            <li><a href="badges.html">Components</a></li>
+                            <li><a href="#theprocess">Process</a></li>
+                            <li><a href="#team">Team</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -72,87 +72,153 @@
             <h3 class="wow fadeInUp">The Process</h3>
             <div class="row">
                 <div class="col m4">
-                    <h2><i class="fa fa-list-ul"></i></h2>
+                    <h2><i class="fa black-text fa-list-ul"></i></h2>
                     <h4>Fill in the Blanks</h4>
                     <p>Our prescreening methodology asks for extremely broad information. How old are you? What's your height/weight? Are you diabetic?</p>
                 </div>
                 <div class="col m4">
-                    <h2><i class="fa fa-bar-chart"></i></h2>
+                    <h2><i class="fa black-text fa-bar-chart"></i></h2>
                     <h4>Get Results</h4>
-                    <p>We give you the probabilities of you having cancer, an adenoma, and nothing at all. The best part? We do it in <b><i>seconds</i></b> with solid accuracy.</p>
+                    <p>We give you the probabilities of you having cancer, an adenoma, and nothing at all. The best part? We do it in <b><i>seconds</i></b> with accurate results.</p>
                 </div>
                 <div class="col m4">
-                    <h2><i class="fa fa-check"></i></h2>
+                    <h2><i class="fa black-text fa-check"></i></h2>
                     <h4>Interpret Results</h4>
                     <p>Rather than giving you a rather binary diagnosis, CounteractIO displays the likelihood of each potential possibility.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!--
-    <div id="warning">
+    <div id="warning" style="color: #FFF;background: #1F1F21">
         <div class="container">
-            <h3>Don't let it go <b>unnoticed.</b></h3>
-            <h5>Colorectal cancer is the <b>3rd most common type of cancer in the United States</b>, affecting more than 50,000 men and women across the nation.<br><br>Take the test if you know you are diabetic or overweight, have a history of colon lesions/polyps, and/or notice things like blood in your stool. Our test uniquely takes less than a second, but it does not sacrifice accuracy. <b>It's better late than never</b>.</h5>
+            <div class="row">
+                <div class="col m5">
+                    <canvas id="chart"></canvas>
+                </div>
+                <div class="col m7" align="center">
+                    <h3>Don't let it go <b>unnoticed.</b></h3>
+                    <h5>Colorectal cancer affects more than <b>140,000 new people</b> every year across the nation.<br><br>Take the test if you know you are diabetic or overweight, have a history of colon lesions/polyps, and/or notice things like blood in your stool.</h5>
+                </div>
+            </div>
         </div>
     </div>
-    -->
-    <div style="height: 500%"></div>
-    <script type="text/javascript">
-    /*var ctx = document.getElementById("type");
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ["Nothing", "Adenoma", "Cancer"],
-                    datasets: [{
-                        label: 'Percent Chance',
-                        data: [40, 25, 35],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    legend: {
-                        labels: {
-                            fontColor: "white"
-                        }
-                    },
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                fontColor: 'transparent'
-                            }
-                        }],
-                        xAxes: [{
-                            ticks: {
-                                fontColor: 'white'
-                            }
-                        }]
-                    },
-                    title: {
-                        display: true,
-                        text: 'Type of Condition',
-                        fontSize: 20,
-                        fontColor: 'white'
-                    },
+    <div id="team">
+        <div class="container">
+            <center>
+                <h3>The Team</h3></center>
+            <div class="row" style="margin-top: 50px">
+                <div class="col m2 s8 square" style="background: url(img/andy.jpg);background-size:cover;background-position: center center"></div>
+                <div class="col m4" style="padding-left: 20px;padding-right:20px">
+                    <hr style="width: 50px;border:none;height: 5px;background: grey" align="left">
+                    <h5>Andy Kamath</h5>
+                    <p><i>Northeastern University</i></p>
+                    <p>Andy's previous research into utilizing AI to develop a prescreen for diabetic retinopathy won top awards from the US Army, Intel, and the SSSI.</p>
+                    <a href="http://andykamath.com">Read more <i class="fa fa-angle-right"></i></a>
+                    <p><a style="color:black" target="_blank" href="http://fb.com/hackgician"><i class="fa black-text fa-facebook " data-wow-delay="500ms"></i></a> <a target="_blank" href="http://andykamath.com/linkedin"><i class="fa black-text fa-linkedin "></i></a> <a target="_blank" href="http://github.com/andykamath"><i class="fa black-text fa-github "></i></a></p>
+                </div>
+                <div class="col m2 s8 square" style="background: url(img/jay.jpg);background-size:cover;"></div>
+                <div class="col m4" style="padding-left: 20px;padding-right:20px">
+                    <hr style="width: 50px;border:none;height: 5px;background: grey" align="left">
+                    <h5>Jay Shenoy</h5>
+                    <p><i>University of California, Berkeley</i></p>
+                    <p>Jay's past work involves using machine learning to diagnose Parkinson's from voice recordings. This won awards from the US Navy and an invitation to present at Intel ISEF.</p>
+                    <a href="http://jayshenoy.com">Read more <i class="fa fa-angle-right"></i></a>
+                    <p><a style="color:black" target="_blank" href="http://fb.com/JRShenoy1"><i class="fa black-text fa-facebook " data-wow-delay="500ms"></i></a> <a target="_blank" href="http://linkedin.com/in/jayshenoy"><i class="fa black-text fa-linkedin "></i></a> <a target="_blank" href="http://github.com/jayshenoy"><i class="fa black-text fa-github "></i></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-job" align="center" style="background: #1F1F21;color: #FFF" id="contact">
+        <div class="container">
+            <h2 class="fadeInUp title upper">Get <span class="fadeInUp title upper" data-wow-delay="250ms">In</span> <span class="fadeInUp title upper" data-wow-delay="500ms">Touch</span></h2>
+            <form action="https://docs.google.com/forms/d/1SfoEoEvrffm9Wwjv_JR6N77VcVjz2DX3w-SNmiYnnDc/formResponse" method="POST" id="ss-form" target="_self" onsubmit="" class="fadeIn" data-wow-delay="500ms">
+                <ol role="list" class="ss-question-list" style="padding-left: 0">
+                    <input type="email" placeholder="Your Email *" name="entry.590052548" value="" class="ss-q-short" id="entry_590052548" dir="auto" aria-label="Name  " aria-required="true" required="" title="" style="width:50%">
+                    <br>
+                    <br>
+                    <textarea name="entry.350270304" rows="8" cols="0" class="ss-q-long" id="entry_350270304" dir="auto" aria-label="How may we help you?  " placeholder="How may we help you?  " aria-required="true" required="" style="width:50%;border: 0"></textarea>
+                    <br>
+                    <input type="hidden" name="draftResponse" value="[,,&quot;-358895960907417255&quot;]
+">
+                    <input type="hidden" name="pageHistory" value="0">
+                    <input type="hidden" name="fbzx" value="-358895960907417255">
+                    <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary">
+            </form>
+            <script>
+            ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
                 }
-            });*/
+            }(document, 'script', 'twitter-wjs');
+            </script>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(".square").css('height', $(".square").width(), function() {
+        $(".square").css('border-radius', '50%')
+    });
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        $(".s8").css('margin-left', '20px')
+    }
+    var ctx = document.getElementById("chart");
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Breast", "Colorectal", "Lung"],
+            datasets: [{
+                label: 'Number of New Cases',
+                data: [232240, 142820, 128190],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                labels: {
+                    fontColor: "white"
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: 'transparent'
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: 'white'
+                    }
+                }]
+            },
+            title: {
+                display: true,
+                text: 'Common Cancers',
+                fontSize: 20,
+                fontColor: 'white'
+            },
+        }
+    });
 
     particlesJS("particles-js", {
         "particles": {

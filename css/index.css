@@ -79,3 +79,13 @@ nav {
     height: 75%;
     color: #FFF
 }
+
+.fa {
+    color: #000;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .square {
+        margin-left: 20px
+    }
+}
