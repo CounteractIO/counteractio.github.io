@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <style type="number/css" media="screen">
+        body { padding-top: 50px; padding-bottom: 50px; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+</head>
+
+<body>
+    <div class="container" id="survey">
+        <div style="padding: 50px">
+            <h3>Survey</h3>
+            <form id="patient-form" method="post">
+                <h5>FIT Result (if applicable)</h5>
+                <input name="fit_result" type="number" pattern="\d*" size="5">
+                <h5>History of Lesions</h5>
+                <p>
+                    <input name="hxbox" type="checkbox" id="Hx_Prev" class="box" />
+                    <label for="Hx_Prev">I have had a history of Colonic Lesions</label>
+                </p>
+                <input name="Hx_Prev" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>History of Polyps</h5>
+                <p>
+                    <input name="polypsbox" type="checkbox" id="Hx_of_Polyps" class="box" />
+                    <label for="Hx_of_Polyps">I have had a history of Colonic Polyps</label>
+                </p>
+                <input name="Hx_of_Polyps" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>Age</h5>
+                <input name="Age" type="number" pattern="\d*" size="5">
+                <h5>Gender</h5>
+                <p>
+                    <input name="Gender" type="radio" id="male" value="0" />
+                    <label for="male">Male</label>
+                </p>
+                <p>
+                    <input name="Gender" type="radio" id="female" value="1" />
+                    <label for="female">Female</label>
+                </p>
+                <h5>Smoke</h5>
+                <p>
+                    <input name="smokebox" type="checkbox" id="Smoke" class="box" />
+                    <label for="Smoke">I have smoked in the past</label>
+                </p>
+                <input name="Smoke" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>Diabetic</h5>
+                <p>
+                    <input name="diabox" type="checkbox" id="Diabetic" class="box" />
+                    <label for="Diabetic">I am diabetic</label>
+                </p>
+                <input name="Diabetic" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>Family History</h5>
+                <p>
+                    <input name="fambox" type="checkbox" id="Hx_fam_CRC" class="box" />
+                    <label for="Hx_fam_CRC">My family has a history of Colorectal Cancer</label>
+                </p>
+                <input name="Hx_fam_CRC" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>Height (centimeters)</h5>
+                <input name="Height" type="number" pattern="\d*" size="5">
+                <h5>Weight (kilograms)</h5>
+                <input name="Weight" type="number" pattern="\d*" size="5">
+                <h5>BMI</h5>
+                <input name="BMI" type="number" pattern="\d*" size="5">
+                <h5>Race</h5>
+                <p>
+                    <input name="fambox" type="checkbox" id="White" class="box" />
+                    <label for="White">White</label>
+                </p>
+                <input name="White" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <p>
+                    <input name="fambox" type="checkbox" id="Native" class="box" />
+                    <label for="Native">Native</label>
+                </p>
+                <input name="Native" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <p>
+                    <input name="fambox" type="checkbox" id="Black" class="box" />
+                    <label for="Black">Black</label>
+                </p>
+                <input name="Black" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <p>
+                    <input name="fambox" type="checkbox" id="Pacific" class="box" />
+                    <label for="Pacific">Pacific</label>
+                </p>
+                <input name="Pacific" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <p>
+                    <input name="fambox" type="checkbox" id="Asian" class="box" />
+                    <label for="Asian">Asian</label>
+                </p>
+                <input name="Asian" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <p>
+                    <input name="fambox" type="checkbox" id="Other" class="box" />
+                    <label for="Other">Other</label>
+                </p>
+                <input name="Other" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <p>
+                    <input name="fambox" type="checkbox" id="Ethnic" class="box" />
+                    <label for="Ethnic">Ethnic</label>
+                </p>
+                <input name="Ethnic" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>NSAIDs</h5>
+                <p>
+                    <input name="fambox" type="checkbox" id="NSAID" class="box" />
+                    <label for="NSAID">I have taken an NSAID</label>
+                </p>
+                <input name="NSAID" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>Antibiotics</h5>
+                <p>
+                    <input name="fambox" type="checkbox" id="Abx" class="box" />
+                    <label for="Abx">I have taken antibiotics</label>
+                </p>
+                <input name="Abx" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <h5>Diabetes Medications</h5>
+                <p>
+                    <input name="fambox" type="checkbox" id="Diabetes_Med" class="box" />
+                    <label for="Diabetes_Med">I take medications for diabetes</label>
+                </p>
+                <input name="Diabetes_Med" type="number" pattern="\d*" size="5" style="display:none" value="0">
+                <span id=result></span>
+                <a class="waves-effect waves-light btn" id="calculate">Submit</a>
+            </form>
+        </div>
+    </div>
+    <div id="results" class="element">
+        <div class="container" style="padding-top: 50px;padding-bottom: 50px">
+            <canvas id="type"></canvas>
+            <canvas id="stage"></canvas>
+        </div>  
+    </div>
+    <script>
+    $('.box').change(function() {
+        var c = this.checked ? '1' : '0';
+        $('[name=' + $(this).attr('id') + ']').val(c);
+    });
+    $('#calculate').click(function() {
+        var form_data = new FormData($('#patient-form')[0]);
+        console.log(form_data)
+        $.ajax({
+            type: 'POST',
+            url: 'http://c9d88fd4.ngrok.io/getprob',
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            async: false,
+            success: function(data) {
+                $("#result").text(data.result);
+                console.log(data);
+                $("#survey").hide()
+                $("#results").show()
+                var ctx = document.getElementById("type");
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Nothing", "Adenoma", "Cancer"],
+                        datasets: [{
+                            label: 'Percent Chance',
+                            data: [data.none * 100, data.adenoma * 100, data.cancer * 100],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        title: {
+                            display: true,
+                            text: 'Type of Condition',
+                            fontSize: 20
+                        },
+                    }
+                });
+                if ((data.pres > data.notpres || data.cancer > data.none) && data.adenoma < data.cancer) {
+                    var ctx = document.getElementById("stage");
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ["Stage 1", "Stage 2", "Stage 3", "Stage 4"],
+                            datasets: [{
+                                label: 'Percent Chance',
+                                data: [data.stage1 * 100, data.stage2 * 100, data.stage3 * 100, data.stage4 * 100],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            },
+                            title: {
+                                display: true,
+                                text: 'Stage of Cancer',
+                                fontSize: 20
+                            },
+                        }
+                    });
+                }
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
+                $("#results").css('margin-top', ($(window).height() - $("#results").height())/2)
+            },
+        });
+    });
+    </script>
+    </div>
+    </div>
+</body>
+
+</html>

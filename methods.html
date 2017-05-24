@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <title>CounteractIO</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/WOW.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+    new WOW().init();
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="Author" content="Andy Kamath" />
+    <meta property="og:title" content="CounteractIO" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Noninvasive AI to detect colorectal cancer." />
+    <meta property="og:url" content="https://counteractio.github.io" />
+    <meta property="og:image" content="https://counteractio.github.io/img/bg1.jpg" />
+    <meta property="og:determiner" content="the" />
+    <meta property="og:locale" content="en_UD" />
+    <meta property="og:site_name" content="CounteractIO" />
+    <!-- Opera Speed Dial Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/logo.png">
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/logo.png">
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="img/logo.png">
+</head>
+
+<body>
+    <div class="main" style="background: url(img/bg1.jpg);background-size: cover;background-position: center center">
+        <div style="height: 100%;width: 100%;background: rgba(0, 0, 0, 0.7)">
+            <div class="navbar-fixed" style="position: fixed">
+                <nav style="position: fixed">
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo title">CounteractIO</a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="index.html#theprocess">Process</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="element">
+                <div class="row" style="height: 100%">
+                    <div class="col m7" align="center" style="height: 100%">
+                        <div class="element wow fadeIn">
+                            <div class="container">
+                                <h3>How we got here</h3>
+                                <h4>-Andy Kamath</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m5 hide-on-small-only" style="height: 100%">
+                        <div id="particles-js" style="height: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="article">
+        <div class="container">
+        <h4>What even is CounteractIO? </h4>
+        <p>CounteractIO was the project that took 1st place at the United Nations Hack4Humanity event after it used machine learning on social media</p>
+        </div>
+    </div>
+
+    <div style="height: 500%"></div>
+
+    <script type="text/javascript">
+    $(".square").css('height', $(".square").width(), function() {
+        $(".square").css('border-radius', '50%')
+    });
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        $(".s8").css('margin-left', '20px')
+    }
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 250,
+                "density": {
+                    "enable": true
+                },
+
+            },
+            "color": {
+                "value": ["#fff"]
+            },
+            "opacity": {
+                "value": 1,
+                "random": false,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 1,
+                    "sync": false
+                }
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "size": {
+                "value": 2.5,
+                "random": true
+            },
+            "line_linked": {
+                "enable": true
+            },
+            "move": {
+                "enable": true,
+                "speed": 2,
+                "random": true,
+                "direction": "none",
+                "straight": false
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true
+                }
+            },
+            "modes": {
+                "push": {
+                    "particles_nb": 1
+                }
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
