@@ -109,7 +109,7 @@
         <div class="container">
             <center>
                 <h3>The Team</h3></center>
-            <div class="row" style="margin-top: 50px">
+            <div class="row" style="margin-top: 50px;padding: 0" id="ugh">
                 <div class="col m1 s8 square circle" style="background: url(img/andy.jpg);background-size:cover;background-position: center center"></div>
                 <div class="col m3" style="padding-left: 20px;padding-right:20px">
                     <hr style="width: 50px;border:none;height: 5px;background: grey" align="left">
@@ -167,8 +167,12 @@
             </script>
         </div>
     </div>
+
     <script type="text/javascript">
-    $(".square").css('height', 1.25*$(".square").width());
+    $(document).ready(function() {
+        $(".square").css('height', $("#ugh").width()/12)
+        //$(".square").css('height', 1.3*$('.square').width());
+    })
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $(".s8").css('margin-left', '20px')
     }
