@@ -167,15 +167,15 @@
             </script>
         </div>
     </div>
-
     <script type="text/javascript">
     $(document).ready(function() {
-        $(".square").css('height', $("#ugh").width()/12)
-        //$(".square").css('height', 1.3*$('.square').width());
+        $(".square").css('height', $("#ugh").width() / 12)
+            //$(".square").css('height', 1.3*$('.square').width());
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            $(".s8").css('margin-left', '20px');
+            $(".square").css('height', $("#ugh").width()*.66)
+        }
     })
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $(".s8").css('margin-left', '20px')
-    }
     var ctx = document.getElementById("chart");
     var myChart = new Chart(ctx, {
         type: 'bar',
