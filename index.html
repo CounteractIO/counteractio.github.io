@@ -110,8 +110,8 @@
             <center>
                 <h3>The Team</h3></center>
             <div class="row" style="margin-top: 50px">
-                <div class="col m2 s8 square" style="background: url(img/andy.jpg);background-size:cover;background-position: center center"></div>
-                <div class="col m4" style="padding-left: 20px;padding-right:20px">
+                <div class="col m1 s8 square circle" style="background: url(img/andy.jpg);background-size:cover;background-position: center center"></div>
+                <div class="col m3" style="padding-left: 20px;padding-right:20px">
                     <hr style="width: 50px;border:none;height: 5px;background: grey" align="left">
                     <h5>Andy Kamath</h5>
                     <p><i>Northeastern University</i></p>
@@ -119,12 +119,21 @@
                     <a href="http://andykamath.com">Read more <i class="fa fa-angle-right"></i></a>
                     <p><a style="color:black" target="_blank" href="https://fb.com/hackgician"><i class="fa black-text fa-facebook " data-wow-delay="500ms"></i></a> <a target="_blank" href="https://andykamath.com/linkedin"><i class="fa black-text fa-linkedin "></i></a> <a target="_blank" href="https://github.com/andykamath"><i class="fa black-text fa-github "></i></a></p>
                 </div>
-                <div class="col m2 s8 square" style="background: url(img/jay.jpg);background-size:cover;"></div>
-                <div class="col m4" style="padding-left: 20px;padding-right:20px">
+                <div class="col m1 s8 square circle" style="background: url(img/jay.jpg);background-size:cover;"></div>
+                <div class="col m3" style="padding-left: 20px;padding-right:20px">
                     <hr style="width: 50px;border:none;height: 5px;background: grey" align="left">
                     <h5>Jay Shenoy</h5>
                     <p><i>University of California, Berkeley</i></p>
                     <p>Jay's past work involves using machine learning to diagnose Parkinson's from voice recordings. This won awards from the US Navy and an invitation to present at Intel ISEF.</p>
+                    <a href="http://jayshenoy.com">Read more <i class="fa fa-angle-right"></i></a>
+                    <p><a style="color:black" target="_blank" href="https://fb.com/JRShenoy1"><i class="fa black-text fa-facebook " data-wow-delay="500ms"></i></a> <a target="_blank" href="https://linkedin.com/in/jayshenoy"><i class="fa black-text fa-linkedin "></i></a> <a target="_blank" href="https://github.com/jayshenoy"><i class="fa black-text fa-github "></i></a></p>
+                </div>
+                <div class="col m1 s8 square circle" style="background: url(img/aditya.jpg);background-size:cover;"></div>
+                <div class="col m3" style="padding-left: 20px;padding-right:20px">
+                    <hr style="width: 50px;border:none;height: 5px;background: grey" align="left">
+                    <h5>Aditya Singh</h5>
+                    <p><i>University of Pennsylvania</i></p>
+                    <p>Aditya’s work with machine learning includes a project analyzing nuclei of liver cells to diagnose cancer, which was recognized by Intel. On the business side, he created a digitalized cueing service recognized by Cedar Fair.</p>
                     <a href="http://jayshenoy.com">Read more <i class="fa fa-angle-right"></i></a>
                     <p><a style="color:black" target="_blank" href="https://fb.com/JRShenoy1"><i class="fa black-text fa-facebook " data-wow-delay="500ms"></i></a> <a target="_blank" href="https://linkedin.com/in/jayshenoy"><i class="fa black-text fa-linkedin "></i></a> <a target="_blank" href="https://github.com/jayshenoy"><i class="fa black-text fa-github "></i></a></p>
                 </div>
@@ -162,9 +171,7 @@
         </div>
     </div>
     <script type="text/javascript">
-    $(".square").css('height', $(".square").width(), function() {
-        $(".square").css('border-radius', '50%')
-    });
+    $(".square").css('height', 1.25*$(".square").width());
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $(".s8").css('margin-left', '20px')
     }
