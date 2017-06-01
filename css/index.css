@@ -195,13 +195,6 @@ nav a {
     background: red; /* For browsers that do not support gradients */
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    z-index: 50;
-    background: transparent;
-}
-
 ul li a {
     color: #000
 }

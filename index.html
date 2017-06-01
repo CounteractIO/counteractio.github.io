@@ -42,9 +42,9 @@
 </head>
 
 <body>
-    <div id="r" style="height: 100%;overflow:hidden;position: relative" align="center">
+    <div id="everything">
         <nav>
-            <div class="nav-wrapper" style="height: 100%">
+            <div class="navbar-fixed nav-wrapper" style="height: 100%">
                 <a href="#!" class="brand-logo"><img src="img/icon.png" height="50" style="position: relative;top:50%;transform: translateY(10%);" alt=""></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
@@ -61,94 +61,72 @@
                 </ul>
             </div>
         </nav>
-        <div class="slanted" id="o" style="height: 100%;width: 100%;z-index:0;position:absolute" align="left">
-            <div class="slanted" id="y" style="height: 100%;width: 100%" align="left">
-                <div class="slanted" id="g" style="height: 100%;width: 100%" align="left">
-                    <div class="slanted" id="b" style="height: 100%;width: 100%" align="left">
-                        <div class="slanted" id="i" style="height: 100%;width: 100%" align="left">
-                            <div class="slanted" id="w" style="height: 100%;width: 100%" align="left">
+        <div id="r" style="height: 100%;position: fixed;width: 100%;" align="center">
+            <div class="slanted" id="o" style="height: 100%;width: 100%;z-index:0;position:absolute" align="left">
+                <div class="slanted" id="y" style="height: 100%;width: 100%" align="left">
+                    <div class="slanted" id="g" style="height: 100%;width: 100%" align="left">
+                        <div class="slanted" id="b" style="height: 100%;width: 100%" align="left">
+                            <div class="slanted" id="i" style="height: 100%;width: 100%" align="left">
+                                <div class="slanted" id="w" style="height: 100%;width: 100%" align="left">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div style="height: 100%; width: 70%;right:0;z-index:50;position: absolute" class="hide-on-small-and-down" align="left">
-            <div class="element">
-                <h2 class="title slant hide-on-small-only" id="title">CounteractIO</h2>
-                <h5>Noninvasive AI to Diagnose Colon Cancer </h5>
-                <br>
-                <a href="http://google.com" class="btn youtube blue" href="https://www.youtube.com/watch?v=fvWXstffJBQ"><i class="fa fa-play" style="margin-right: 10px"></i> learn more</a>
-            </div>
-        </div>
-        <div style="height: 100%; width: 100%;right:0;position:absolute;" class="hide-on-med-and-up" align="left">
-            <div class="element">
-                <div class="container">
-                    <h3 class="title slant hide-on-med-and-up" id="title">Counteract</h3>
-                    <h5>Noninvasive AI to Diagnose Colon Cancer </h5>
+            <div style="height: 100%; width: 70%;right:0;z-index:50;position: absolute" class="hide-on-small-and-down" align="left">
+                <div class="content element">
+                    <h2 class="title slant hide-on-small-only" id="title">CounteractIO</h2>
+                    <h5>Noninvasive AI to Diagnose Colon Cancer</h5>
                     <br>
-                    <a class="btn youtube blue"><i class="fa fa-play" style="margin-right: 10px"></i> learn more</a>
+                    <a class="btn youtube open blue"><i class="fa fa-play" style="margin-right: 10px"></i> learn more</a>
+                </div>
+                <div class="vid element" style="display: none">
+                    <iframe src="https://www.youtube.com/embed/V5VoXu74YVk" width="640" height="360" frameborder="0"></iframe>
+                    <br>
+                    <a class="btn youtube close blue"><i class="fa fa-close" style="margin-right: 10px"></i> Close</a>
+                </div>
+            </div>
+            <div style="height: 100%; width: 100%;right:0;position:absolute;" class="hide-on-med-and-up" align="left">
+                <div class="content element">
+                    <div class="container">
+                        <h3 class="title slant hide-on-med-and-up" id="title">Counteract</h3>
+                        <h5>Noninvasive AI to Diagnose Colon Cancer </h5>
+                        <br>
+                        <a class="btn youtube open blue"><i class="fa fa-play" style="margin-right: 10px"></i> learn more</a>
+                    </div>
+                </div>
+                <div class="vid element" style="display: none">
+                    <iframe width="100%" src="https://www.youtube.com/embed/V5VoXu74YVk" frameborder="0" allowfullscreen></iframe>
+                    <br>
+                    <a class="btn youtube close blue"><i class="fa fa-close" style="margin-right: 10px"></i> Close</a>
+                </div>
+            </div>
+            <div class="hide-on-small-and-down" style="height: 100%;width: 100%;position: absolute;top: 0;z-index: 1;animation-duration: 2s;animation-delay:1s" align="left" id="phone">
+                <div class="element" style="width: 40%;height: 100%;background: url(img/ss1_iphone5s_gold_side1.png);background-repeat: no-repeat;background-size: contain;background-position: center center;position: relative;display:block;">
                 </div>
             </div>
         </div>
-        <div class="hide-on-small-and-down" style="height: 100%;width: 100%;position: absolute;top: 0;z-index: 1;animation-duration: 2s;animation-delay:1s" align="left" id="phone">
-            <div class="element" style="width: 40%;height: 100%;background: url(img/ss1_iphone5s_gold_side1.png);background-repeat: no-repeat;background-size: contain;background-position: center center;position: relative;display:block;">
-            </div>
+    </div>
+    <div id="load" style="height: 100%">
+        <div class="element" align="center">
+            <h1>This page load is slow. Your diagnosis won't be.</h1>
         </div>
     </div>
     <script type="text/javascript">
     //$(".slant").css('transform', 'rotateZ('+(360-Math.atan(.5*$(window).height()/$(window).width())*180/Math.PI).toString()+'deg)')
-    $('a[href*="vimeo.com"]').each(function() {
-        $this = $(this);
-        var href = 'http://player.vimeo.com/video/' + $this.attr('href').split('/').pop() + '?autoplay=1';
-        $this.attr('href', href);
-        $this.colorbox({
-            iframe: true,
-            href: href,
-            innerWidth: 640,
-            innerHeight: 360
-        });
+    $(".btn").click(function() {
+        $(".vid").toggle();
+        $(".content").toggle();
     });
-
-    function cbEnable() {
-        $('a[href*="vimeo.com"]').each(function() {
-            $this = $(this);
-            var href = 'http://player.vimeo.com/video/' + $this.attr('href').split('/').pop() + '?autoplay=1';
-            $this.attr('href', href).removeAttr('target');
-            $this.colorbox({
-                iframe: true,
-                href: href,
-                innerWidth: 640,
-                innerHeight: 360
-            });
-        });
-    }
-
-    function cbDisable() {
-        $('a[href*="vimeo.com"]').each(function() {
-            $this = $(this);
-            var href = 'http://player.vimeo.com/video/' + $this.attr('href').split('/').pop() + '?autoplay=1';
-            $this.attr('href', href).attr('target', '_blank'); // show vid in a new tab
-            $this.colorbox.remove(); // disable colorbox on small screens
-        });
-    }
-
-    // add breakpoints
-
-    $.rubberband({
-        minWidth: [768],
-        maxWidth: [767]
-    });
-
-    // enable or disable colorbox based on current breakpoint
-
-    $(window).on('snap', function(e, data) {
-        if (data.maxWidth == 767) {
-            cbDisable();
-        }
-        if (data.minWidth == 768) {
-            cbEnable();
-        }
+    $(".button-collapse").sideNav();
+    $("#everything").hide()
+    $(window).on('load', function() {
+        $("#load").fadeOut(1000, function() {
+            $("#everything").fadeIn(100, function() {
+                $("#r").css('height', $(window).height() - 64)
+            })
+        })
     });
     </script>
 </body>
