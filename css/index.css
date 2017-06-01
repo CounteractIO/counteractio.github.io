@@ -1,7 +1,6 @@
 @import url(animate.css);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url('https://fonts.googleapis.com/css?family=Bitter|Cabin|Hind|Muli|Oxygen|Poppins');
-
 html,
 body {
     overflow-x: hidden;
@@ -28,64 +27,181 @@ body {
     transform: translateY(-50%);
 }
 
-*
-{
+* {
     font-family: Muli;
     color: #1F121
 }
 
-h1
-{
-    margin:0;
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+a {
+    margin: 0;
 }
 
 @-webkit-keyframes rotate {
     from {
         -webkit-transform: rotate(0deg);
+        border: 1px solid #000;
+        border-right: 0;
+        border-bottom: 0;
     }
-    to { 
+    to {
         -webkit-transform: rotate(360deg);
+        border: 0
     }
 }
+
 #loading {
-    border: 1px solid #000;
-    border-right: 0;
-    border-bottom: 0;
     -webkit-border-radius: 100px;
-    height: 100px;
-    width: 100px;
-    margin: 100px;
-    -webkit-transition: all 0.5s ease-in;
-    -webkit-animation-name:             rotate; 
-    -webkit-animation-duration:         1.0s; 
-    -webkit-animation-iteration-count:  infinite;
+    -webkit-transition: all 1s ease-in;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1.0s;
     -webkit-animation-timing-function: linear;
 }
 
-.container
-{
+.container {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 nav {
-    background: black;
+    background: transparent;
     box-shadow: none;
     padding-left: 10%;
-    padding-right: 10%
+    padding-right: 10%;
 }
 
-.main {
-    height: 75%;
-    color: #FFF
-}
-
-.fa {
-    color: #000;
+nav a {
+    color: #000
 }
 
 @media only screen and (max-device-width: 480px) {
     .square {
         margin-left: 20px
     }
+}
+
+@keyframes orange {
+    from {
+        -webkit-clip-path: polygon(0 25%, 100% 75%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 25%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 90%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+@keyframes yellow {
+    from {
+        -webkit-clip-path: polygon(0 25%, 100% 75%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 25%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 80%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+@keyframes green {
+    from {
+        -webkit-clip-path: polygon(0 25%, 100% 75%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 25%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 70%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+@keyframes blue {
+    from {
+        -webkit-clip-path: polygon(0 25%, 100% 75%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 25%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 60%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+@keyframes white {
+    from {
+        -webkit-clip-path: polygon(0 25%, 100% 75%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 25%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 50%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+#w {
+    height: 100%;
+    animation-name: white;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background: #F7F7F7; /* For browsers that do not support gradients */
+}
+
+#b {
+    height: 100%;
+    animation-name: blue;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background: #007AFF; /* For browsers that do not support gradients */
+}
+
+#g {
+    height: 100%;
+    animation-name: green;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background: green; /* For browsers that do not support gradients */
+}
+
+#y {
+    height: 100%;
+    animation-name: yellow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background: yellow; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFDB4C, #FFCD02); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFDB4C, #FFCD02); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFDB4C, #FFCD02); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFDB4C, #FFCD02); /* Standard syntax */
+}
+
+#o {
+    height: 100%;
+    animation-name: orange;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background: orange; /* For browsers that do not support gradients */
+    
+}
+
+#r {
+    background: red; /* For browsers that do not support gradients */
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    background: transparent;
+}
+
+ul li a {
+    color: #000
 }
