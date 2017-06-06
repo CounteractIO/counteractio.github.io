@@ -61,25 +61,31 @@
             <div style="height: 100%;width: 100%;background: rgba(0,0,0,0.5);color: #FFF">
                 <div class="element">
                     <div class="container">
-                        <h1 class="title">About Us</h1>
-                        <h5>Our Miniature Manifesto</h5>
+                        <h1 class="title">The Process</h1>
+                        <h5>Our patent pending methodology</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="about">
+        <div id="team">
             <div class="container">
-                <h4>What do you do?</h4>
+                <h4>What We Do</h4>
                 <br>
-                <p>CounteractIO works to detect colon cancer with a simple blood test and some basic information about you. So far, the only other noninvasive test to help screen for colon cancer is a blood count test. Blood tests on their own yield a high amount of false positives for colorectal cancer, meaning that they will often say you have cancer when you really don't, leading to you having to pay for unnecessary and painful additional tests like a colonoscopy and a biopsy. Our test improves the accuracy of the existing blood test by pairing it with powerful artificial intelligence algorithms that utilize basic information about you, like your BMI and some pre-existing conditions like diabetes.</p>
+                <p>We're trying to optimize noninvasive prescreen methodologies for colon cancer. Currently, the only existing prescreen tests for colorectal cancer count the amount of blood in the stool and make a diagnosis solely based on that metric. The fecal immunochemical test (FIT), the guiac fecal occult blood test (gFOBT), and other such blood count tests approved by the FDA have a high specificity rate, but a very low sensitivity rate. This means that there is a high percentage of people that show signs of cancer that get misdiagnosed with a false negative. Considering that these tests are only taken about once a year, the patient <b>allows the cancer to grow</b> due to the misdiagnosis. It gets exponentially harder to treat as the cancer grows, and <b>we wanted to do something about that</b>.</p>
+                <center><a href="http://www.cancerresearchuk.org/sites/default/files/cstream-node/surv_5yr_stage_mw_bowel_1.png"><img style="max-width: 75%; min-width: 50%" src="http://www.cancerresearchuk.org/sites/default/files/cstream-node/surv_5yr_stage_mw_bowel_1.png" alt=""></a></center>
+                <h4>The Way We Do It</h4>
                 <br>
-                <h4>Who are you?</h4>
+                <p>
+                    CounteractIO uses ensemble methods to maintain high levels of accuracy and sensitivity on a prescreen test for colorectal cancer. The mechanism works through a soft-voting majority vote classifier composed of extreme gradient boosting (XGB) classification, logistic regression classification, and artificial neural network (ANN) classification.
+                    <br><br>
+                    The inputs include but are not limited to fecal blood count, history of polyps, history of lesions, history of colorectal cancer, history of smoking, diabetes in the patient, BMI of the patient, and the age of the patient. The outputs were originally a set of multi-label classifications of normal, adenoma, or actual cancer. These outputs were binarized into normal/not normal so as to increase sensitivity through basic softmax probabilities: if softmax determines a 33% chance of normal, 33% adenoma, and 33% cancer, when binarized, it will become 66% not normal and 33% normal, thereby increasing sensitivity rate.
+                    <br><br>
+                    The classification algorithms were selected based on their optimized ability to handle a broad range of inter-related inputs with a high accuracy and equally high, if not higher, sensitivity. The first classifier, extreme gradient boosting, tended to have a higher specificity than a sensitivity. The second classifier is a logistic regression classifier, which had a higher sensitivity than a specificity. The last classifier is an artificial feed-forward L-BFGS neural network with rectified linear unit (ReLU) activation, which performed at average specificity and sensitivity.
+                    <br><br>
+                    There will be three separate voting classifiers used, with three separate output arrays. The outputs of the algorithm will correspond to each classifier and will therefore also be three fold, with decreasing levels of precision as the level of diagnosis increases. The diagnosis will start with a softmax probability output of normal/not normal. If not normal, the machine will then train on the same inputs but with multi-label outputs of normal, adenoma, or cancer. It will then return an additional level of diagnosis of adenoma/cancer, again based on softmax probabilities. If the probability of cancer outweighs that of an adenoma, a separate classifier will be trained on the same inputs, with the new outputs being stages of the cancer, from 0-4. The softmax function will return probabilities for each stage of cancer.
+                </p>
                 <br>
-                <p>After having family being directly affected by the current problems associated with colon cancer diagnosis, we were inspired to make a difference. Armed with our knowledge of computer science and machine learning, we decided to do something to address this problem. We are students at Northeastern, UC Berkeley, and the University of Pennsylvania united with the desire to effect change. We are award-winning biotechnology researchers on the regional, state, and international levels. We are young adults trying to find our way in this world.</p>
-                <br>
-                <h4>How can I help?</h4>
-                <br>
-                <p>We're currently looking for doctors, specifically in gastroenterology and oncology, to help us with our research as we proceed to get the product clinically validated and prove our results. We are also looking for seed funding in order to broaden our horizons and get CounteractIO into the hands of more oncology and gastroenterology hospitals around the nation. Can you help? <b>Get in touch below.</b></p>
+                <center><img src="img/flowchart.png" alt=""></center>
             </div>
         </div>
         <div class="jumbotron jumbotron-job" align="center" style="background: #1F1F21;color: #FFF" id="contact">
@@ -96,7 +102,7 @@
                         ">
                         <input type="hidden" name="pageHistory" value="0">
                         <input type="hidden" name="fbzx" value="-358895960907417255">
-                        <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary">
+                        <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn    btn-primary">
                     </form>
                     <script>
                     ! function(d, s, id) {
@@ -113,10 +119,11 @@
                 </div>
             </div>
             <script type="text/javascript">
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) $(".square").css('height', $('.row').width() * .75);
+            $(".button-collapse").sideNav();
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) $(".square").css('height', $('.row').width() * .75);
+            else if (/iPad/i.test(navigator.userAgent)) $(".square").css('height', $('.row').width()*.25);
             else $(".square").css('height', $('.row').width() * .25)
             $(".m9").css('height', $(".square").height())
-            $(".button-collapse").sideNav();
             </script>
         </body>
     </html>
