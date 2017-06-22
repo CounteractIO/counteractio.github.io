@@ -23,7 +23,7 @@
     <meta name="Author" content="Andy Kamath" />
     <meta property="og:title" content="CounteractIO" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Trying to make the world a better place." />
+    <meta property="og:description" content="Noninvasive AI to detect colorectal cancer." />
     <meta property="og:url" content="https://counteractio.github.io" />
     <meta property="og:image" content="https://counteractio.github.io/img/bg1.jpg" />
     <meta property="og:determiner" content="the" />
@@ -41,11 +41,11 @@
     <link rel="apple-touch-icon-precomposed" href="img/icon.png">
 </head>
 
-<body>
+<body style="overflow: hidden;">
     <div id="everything">
-        <nav style="position: fixed;z-index: 99" class="white">
-            <div class="navbar-fixed nav-wrapper">
-                <a href="index.html" class="brand-logo wow fadeInLeft"><img src="img/icon.png" height="50" style="position: relative;top:50%;transform: translateY(10%);" alt=""></a>
+        <nav>
+            <div class="navbar-fixed nav-wrapper" style="height: 100%">
+                <a href="index.html" class="brand-logo"><img src="img/icon.png" height="50" style="position: relative;top:50%;transform: translateY(10%);" alt=""></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="about.html">About</a></li>
@@ -59,15 +59,7 @@
                 </ul>
             </div>
         </nav>
-        <div id="main">
-            <div class="element">
-                <div class="container">
-                    <h1 class="title wow fadeInLeft">Biotech for the Better.</h1>
-                    <h5 class="wow fadeInLeft" data-wow-delay="100ms">Leveraging artificial intelligence in the biomedical world</h5>
-                </div>
-            </div>
-        </div>
-        <div class="wow fadeIn" data-wow-offset="100" id="r" style="height: 100%;position:relative;width: 100%;" align="center">
+        <div id="r" style="height: 100%;position: fixed;width: 100%;" align="center">
             <div class="slanted" id="o" style="height: 100%;width: 100%;z-index:0;position:absolute" align="left">
                 <div class="slanted" id="y" style="height: 100%;width: 100%" align="left">
                     <div class="slanted" id="g" style="height: 100%;width: 100%" align="left">
@@ -80,11 +72,10 @@
                     </div>
                 </div>
             </div>
-            <div style="height: 100vh; width: 70%;right:0;z-index:50;position: absolute" class="hide-on-small-and-down" align="left">
+            <div style="height: 100%; width: 70%;right:0;z-index:50;position: absolute" class="hide-on-small-and-down" align="left">
                 <div class="content element">
-                    <h5>Our Latest Product:</h5>
-                    <h2 class="title slant hide-on-small-only" id="title">Screen for Colon Cancer</h2>
-                    <h5>96% cheaper; 25% more sensitive</h5>
+                    <h2 class="title slant hide-on-small-only" id="title">CounteractIO</h2>
+                    <h5>Noninvasive AI to Diagnose Colon Cancer</h5>
                     <br>
                     <a class="btn youtube open blue"><i class="fa fa-play" style="margin-right: 10px"></i> learn more</a>
                 </div>
@@ -97,9 +88,8 @@
             <div style="height: 100%; width: 100%;right:0;position:absolute;" class="hide-on-med-and-up" align="left">
                 <div class="content element">
                     <div class="container">
-                        <h5>Our Latest:</h5>
-                        <h5 class="title slant hide-on-med-and-up">Screen for Colon Cancer</h5>
-                        <h5>96% cheaper; 25% more sensitive</h5>
+                        <h3 class="title slant hide-on-med-and-up" id="title">Counteract</h3>
+                        <h5>Noninvasive AI to Diagnose Colon Cancer </h5>
                         <br>
                         <a class="btn youtube open blue"><i class="fa fa-play" style="margin-right: 10px"></i> learn more</a>
                     </div>
@@ -115,20 +105,10 @@
                 </div>
             </div>
         </div>
-        <div id="main">
-            <div class="element">
-                <div class="container">
-                    <h5>Other things we've built:</h5>
-                    <h3 class="title wow fadeInLeft">Screen for <span class="illness title"></span></h3>
-                    <h5 class="wow fadeInLeft desc" data-wow-delay="100ms"></h5>
-                    <a href="" id="link">Read More <i class="fa fa-angle-right"></i></a>
-                </div>
-            </div>
-        </div>
     </div>
     <div id="load" style="height: 100%">
         <div class="element" align="center">
-            <div id="loading"></div>
+            <h1>This page load is slow. Your diagnosis won't be.</h1>
         </div>
     </div>
     <script type="text/javascript">
@@ -142,20 +122,10 @@
     $(window).on('load', function() {
         $("#load").fadeOut(200, function() {
             $("#everything").fadeIn(100, function() {
-                //$("#r").css('height', $(window).height() - 64)
+                $("#r").css('height', $(window).height() - 64)
             })
         })
     });
-    var s = 0;
-    titles = ['Parkinson\'s', 'Online Threats', 'Retinopathy']
-    desc = ['Just with voice recordings<br><br><b>Intel ISEF</b> International Finalist<br><b>US Navy</b> Award', 'Detect violent behavior on social media<br><br><b>United Nations</b> U4H Grand Award', 'Just with a picture of the eye<br><br><b>Intel</b> Excellence in Computer Science Award<br><b>US Army</b> Silver Award<br><b>SSSI</b> Award for Excellence in Public Health']
-    links = ['https://drive.google.com/file/d/0BxIbR5KkerWfX0pxUHFTSmMxSTg/view', 'http://github.com/counteractio/counteract', 'https://www.linkedin.com/pulse/weighted-majority-classification-improve-diabetic-andy-kamath']
-    setInterval(function() {
-        s = (s == titles.length - 1) ? 0 : s + 1;
-        $(".illness").text(titles[s]);
-        $(".desc").html(desc[s]);
-        $("#link").attr('href', links[s])
-    }, 3000)
     </script>
 </body>
 

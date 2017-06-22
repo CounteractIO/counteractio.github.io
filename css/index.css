@@ -1,8 +1,7 @@
 @import url(animate.css);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
-@import url('http://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
-@import url('http://fonts.googleapis.com/css?family=Muli:100,200,300,400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Cabin|Hind|Muli|Oxygen|Poppins');
+
 html,
 body {
     overflow-x: hidden;
@@ -20,12 +19,7 @@ body {
 }
 
 .title {
-    font-family: Montserrat;
-    font-weight: 500
-}
-
-.number {
-    font-family: 'Slabo 27px'
+    font-family: Cabin;
 }
 
 .element {
@@ -36,6 +30,7 @@ body {
 
 * {
     font-family: Muli;
+    color: #1F121
 }
 
 h1,
@@ -52,24 +47,21 @@ a {
 @-webkit-keyframes rotate {
     from {
         -webkit-transform: rotate(0deg);
+        border: 1px solid #000;
+        border-right: 0;
+        border-bottom: 0;
     }
     to {
         -webkit-transform: rotate(360deg);
+        border: 0
     }
 }
 
 #loading {
-    border: 1px solid #000;
-    border-right: 0;
-    border-bottom: 0;
     -webkit-border-radius: 100px;
-    height: 100px;
-    width: 100px;
-    margin: 100px;
-    -webkit-transition: all 0.5s ease-in;
+    -webkit-transition: all 1s ease-in;
     -webkit-animation-name: rotate;
     -webkit-animation-duration: 1.0s;
-    -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
 }
 
@@ -160,8 +152,7 @@ nav a {
     animation-name: white;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background: #F7F7F7;
-    /* For browsers that do not support gradients */
+    background: #F7F7F7; /* For browsers that do not support gradients */
 }
 
 #b {
@@ -169,8 +160,7 @@ nav a {
     animation-name: blue;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background: #007AFF;
-    /* For browsers that do not support gradients */
+    background: #007AFF; /* For browsers that do not support gradients */
 }
 
 #g {
@@ -178,8 +168,7 @@ nav a {
     animation-name: green;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background: green;
-    /* For browsers that do not support gradients */
+    background: green; /* For browsers that do not support gradients */
 }
 
 #y {
@@ -187,16 +176,11 @@ nav a {
     animation-name: yellow;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background: yellow;
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#FFDB4C, #FFCD02);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#FFDB4C, #FFCD02);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#FFDB4C, #FFCD02);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#FFDB4C, #FFCD02);
-    /* Standard syntax */
+    background: yellow; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFDB4C, #FFCD02); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFDB4C, #FFCD02); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFDB4C, #FFCD02); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFDB4C, #FFCD02); /* Standard syntax */
 }
 
 #o {
@@ -204,24 +188,14 @@ nav a {
     animation-name: orange;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background: orange;
-    /* For browsers that do not support gradients */
+    background: orange; /* For browsers that do not support gradients */
+    
 }
 
 #r {
-    background: red;
-    /* For browsers that do not support gradients */
+    background: red; /* For browsers that do not support gradients */
 }
 
 ul li a {
     color: #000
-}
-
-#main {
-    height: 100%;
-}
-
-#cancer {
-    height: 100%;
-    background: #000
 }
