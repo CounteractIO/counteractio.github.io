@@ -79,16 +79,69 @@
             <h4>The Way We Do It</h4>
             <br>
             <p>
-                CounteractIO uses ensemble methods to maintain high levels of accuracy and sensitivity on a prescreen test for colorectal cancer. The mechanism works through a soft-voting majority vote classifier composed of extreme gradient boosting (XGB) classification, logistic regression classification, and artificial neural network (ANN) classification.
+                CounteractIO uses ensemble methods to maintain high levels of accuracy, specificity, and sensitivity on a prescreen test for colorectal cancer. The mechanism works through ensemble methods in which the FIT result, age, BMI, presence of diabetes, smoking occurrence, and history of polyps/lesions are inputs. The classification algorithms were selected based on their optimized ability to handle a broad range of inter-related inputs with a high accuracy and equally high, if not higher, sensitivity.
                 <br>
-                <br> The inputs include but are not limited to fecal blood count, history of polyps, history of lesions, history of colorectal cancer, history of smoking, diabetes in the patient, BMI of the patient, and the age of the patient. The outputs were originally a set of multi-label classifications of normal, adenoma, or actual cancer. These outputs were binarized into normal/not normal so as to increase sensitivity through basic softmax probabilities: if softmax determines a 33% chance of normal, 33% adenoma, and 33% cancer, when binarized, it will become 66% not normal and 33% normal, thereby increasing sensitivity rate.
+                <br> Our results have turned out stunningly well. Here's an ROC Curve:
                 <br>
-                <br> The classification algorithms were selected based on their optimized ability to handle a broad range of inter-related inputs with a high accuracy and equally high, if not higher, sensitivity. The first classifier, extreme gradient boosting, tended to have a higher specificity than a sensitivity. The second classifier is a logistic regression classifier, which had a higher sensitivity than a specificity. The last classifier is an artificial feed-forward L-BFGS neural network with rectified linear unit (ReLU) activation, which performed at average specificity and sensitivity.
                 <br>
-                <br> There will be three separate voting classifiers used, with three separate output arrays. The outputs of the algorithm will correspond to each classifier and will therefore also be three fold, with decreasing levels of precision as the level of diagnosis increases. The diagnosis will start with a softmax probability output of normal/not normal. If not normal, the machine will then train on the same inputs but with multi-label outputs of normal, adenoma, or cancer. It will then return an additional level of diagnosis of adenoma/cancer, again based on softmax probabilities. If the probability of cancer outweighs that of an adenoma, a separate classifier will be trained on the same inputs, with the new outputs being stages of the cancer, from 0-4. The softmax function will return probabilities for each stage of cancer.
             </p>
+            <div style="width: 100%; height: 60vh; background: url(img/curve1.png);background-size: contain;background-repeat: no-repeat; background-position: center center"></div>
+            <h4>Metrics:</h4>
+            <p>
+                <br> Specificity: 0.90
+                <br> Sensitivity: 0.87
+                <br> Precision: 0.91
+                <br> AUC: 0.97
+                <br> F1: 0.91
+                <br>
+                <br>
+            </p>
+            <h4>
+                Current Tests:
+                <br>
+                <br>
+            </h4>
+            <table style="width:100%">
+                <tr>
+                    <th>Test</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Guaiac Fecal Occult Blood Test</td>
+                    <td>Sensitivity: 70%
+                        <br>Specificity: 92.5%
+                        <br>Cost: $6
+                        <br>Requires dietary restrictions</td>
+                </tr>
+                <tr>
+                    <td>Fecal Immunochemical Test</td>
+                    <td>Sensitivity: 74%
+                        <br>Specificity: 96%
+                        <br>Cost: $5
+                        <br>No dietary restrictions</td>
+                </tr>
+                <tr>
+                    <td>Stool DNA Test</td>
+                    <td>Sensitivity: 92%
+                        <br>Specificity: 89%
+                        <br>Cost: $640
+                        <br>Not for people with a history of lesions/polyps</td>
+                </tr>
+                <tr>
+                    <td>Virtual CT Scan</td>
+                    <td>Sensitivity: 84%
+                        <br>Specificity: 88%
+                        <br>Cost: $400</td>
+                </tr>
+                <tr class="yellow">
+                    <td>CounteractIO</td>
+                    <td>Sensitivity: 87%
+                        <br>Specificity: 90%
+                        <br>Cost: $5
+                        <br>No dietary restrictions</td>
+                </tr>
+            </table>
             <br>
-            <center><img src="img/flowchart.png" alt=""></center>
         </div>
     </div>
     <div class="jumbotron jumbotron-job" align="center" style="background: #1F1F21;color: #FFF" id="contact">
