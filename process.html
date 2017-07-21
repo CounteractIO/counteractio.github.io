@@ -72,7 +72,7 @@
         <div class="container">
             <h4>What We Do</h4>
             <br>
-            <p>We're trying to optimize noninvasive prescreen methodologies for colon cancer. Currently, the only existing prescreen tests for colorectal cancer count the amount of blood in the stool and make a diagnosis solely based on that metric. The fecal immunochemical test (FIT), the guiac fecal occult blood test (gFOBT), and other such blood count tests approved by the FDA have a high specificity rate, but a very low sensitivity rate. This means that there is a high percentage of people that show signs of cancer that get misdiagnosed with a false negative. Considering that these tests are only taken about once a year, the patient <b>allows the cancer to grow</b> due to the misdiagnosis. It gets exponentially harder to treat as the cancer grows, and <b>we wanted to do something about that</b>.</p>
+            <p>We're trying to optimize noninvasive prescreen methodologies for colon cancer. Currently, the only existing prescreen tests for colorectal cancer count the amount of blood in the stool and make a diagnosis solely based on that metric. The fecal immunochemical test (FIT), the guiac fecal occult blood test (gFOBT), and other such blood count tests approved by the FDA are too generalized and therefore diagnose GI illnesses, but not always colorectal cancer itself.</p>
             <center>
                 <a href="http://www.cancerresearchuk.org/sites/default/files/cstream-node/surv_5yr_stage_mw_bowel_1.png"><img style="max-width: 75%; min-width: 50%" src="http://www.cancerresearchuk.org/sites/default/files/cstream-node/surv_5yr_stage_mw_bowel_1.png" alt=""></a>
             </center>
@@ -88,11 +88,12 @@
             <div style="width: 100%; height: 60vh; background: url(img/curve1.png);background-size: contain;background-repeat: no-repeat; background-position: center center"></div>
             <h4>Metrics:</h4>
             <p>
-                <br> Specificity: 0.90
-                <br> Sensitivity: 0.87
-                <br> Precision: 0.91
-                <br> AUC: 0.97
-                <br> F1: 0.91
+                <br> Specificity: 0.92
+                <br> Sensitivity: 0.89
+                <br> Precision: 0.90
+                <br> AUC: 0.95
+                <br> F1: 0.88
+                <br>
                 <br>
                 <br>
             </p>
@@ -107,18 +108,11 @@
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td>Guaiac Fecal Occult Blood Test</td>
-                    <td><span class="red-text">Sensitivity: 70%</span>
-                        <br>Specificity: 92.5%
-                        <br>Cost: $6
-                        <br>Requires dietary restrictions</td>
-                </tr>
-                <tr>
                     <td>Fecal Immunochemical Test</td>
                     <td><span class="red-text">Sensitivity: 74%</span>
                         <br>Specificity: 96%
                         <br>Cost: $5
-                        <br>No dietary restrictions</td>
+                        <br><span class="red-text">Too generalized - positive results don't necessarily mean CRC</span></td>
                 </tr>
                 <tr>
                     <td>Stool DNA Test</td>
@@ -135,9 +129,9 @@
                 </tr>
                 <tr class="yellow">
                     <td>CounteractIO</td>
-                    <td>Sensitivity: 87%
-                        <br>Specificity: 90%
-                        <br>Cost: $5
+                    <td>Sensitivity: 89%
+                        <br>Specificity: 92%
+                        <br>Cost: $10
                         <br>No dietary restrictions</td>
                 </tr>
             </table>
